@@ -1,0 +1,37 @@
+body {
+    font: 6px black;
+    background-color: white;
+    text-align: center;
+    font-family: monospace
+}
+
+input {
+    width: 80%;
+    padding: 2px;
+    margin:20px;
+    border: solid black;
+    font: white 20px 
+}
+
+button {
+    padding: 1px 2px;
+    background-color: blue;
+    color: #fff;
+    border: solid;
+}
+
+button:hover {
+    background-color: red;
+}
+
+h1{
+    font:black 60px serif;
+}
+
+#geneDataContainer {
+    padding: 10px;
+    border: 1px solid red;
+    width: 75%;
+    font-family: monospace;
+    text-align: center;
+}
