@@ -1,0 +1,77 @@
+h1{
+    color:rebeccapurple;
+}
+
+body{
+    background-color: aqua;
+    color:#04550f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+
+    line-height: 1.5em;
+    margin:0;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+}
+
+.a1{
+    background-color: black;
+    font: 12px normal arial, helvetica, sans-serif;
+    color:#ffffff;
+    font-style:italic;
+    text-decoration: overline;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    word-spacing: 0.1em;
+
+}
+
+.a2{
+    border: 3px red dotted;
+    padding:20px;
+    margin: 20px 30px;
+
+}
+
+p{
+    margin: 4.3px 8.9px 4.3px 8.9px;
+    padding: 4.3px 8.9px;
+}
+
+.categories{
+    border: 3px #00cc12 solid;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.categories ul{
+    padding: 10;
+    list-style-type: disc;
+
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{
+    color:green;
+}
+
+a:visited{
+    color: yellow;
+}
+
+.categories li{
+    padding-bottom: 8px;
+    border-bottom: dotted;
+}
