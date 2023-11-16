@@ -1,0 +1,39 @@
+from pydna.dseq import Dseq
+from pydna.dseqrecord import Dseqrecord
+
+from pydna.parsers import parse
+
+template1= parse("C:/Users/Wel/Desktop/snapgene/test/test1.gb")
+template1 : list[Dseqrecord]
+print(template1[0])
+
+template2= parse("C:/Users/Wel/Downloads/addgene-plasmid-39296-sequence-364511.gbk")
+template2 : list[Dseqrecord]
+print(template2[0])
+
+from Bio.Restriction import EcoO109I, AatII
+frags= template2[0].cut(EcoO109I, AatII)
+print(frags[1])
+
+primers= parse("C:/Users/Wel/Desktop/snapgene/test/Primers from pcrGFP1.fa")
+print(primers[0])
+pf= primers[0]
+pr= primers[1]
+
+from pydna.amplify import pcr
+pcrGFP= pcr(pf,pr,template1)
+print(pcrGFP)
+
+from Bio.Restriction import EcoO109I, AatII
+frags1= pcrGFP.cut(EcoO109I, AatII)
+print(frags)
+main_frag= frags1[1]
+print(main_frag)
+
+test_linear= main_frag+ frags[1]
+print(test_linear)
+
+final_product= test_linear.looped()
+final_product : Dseqrecord
+final_product.write("final_product.gb")
+print(final_product)
